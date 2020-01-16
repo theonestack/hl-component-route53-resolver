@@ -1,7 +1,7 @@
 CloudFormation do
   
   tags = []
-  tags << { Key: 'EnvironmentName', Value: Ref('EnvironmentName') }
+  tags << { Key: 'Environment', Value: Ref('EnvironmentName') }
   tags << { Key: 'EnvironmentType', Value: Ref('EnvironmentType') }
   
   EC2_SecurityGroup(:SecurityGroup) {
